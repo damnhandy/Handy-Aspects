@@ -1,0 +1,49 @@
+<assembly>
+	<id>assembly</id>
+	<formats>
+		<format>dir</format>
+		<format>tar.gz</format>
+	</formats>
+
+	<includeBaseDirectory>false</includeBaseDirectory>
+
+	<fileSets>
+		<fileSet>
+			<directory>src/main/resources</directory>
+			<outputDirectory></outputDirectory>
+			<includes>
+				<include>**</include>
+			</includes>
+			<excludes>
+				<exclude>**/META-INF/**</exclude>
+				<exclude>*-config.jar</exclude>
+				<exclude>**/.git/**</exclude>
+				<exclude>**/.gitignore/**</exclude>
+				<exclude>**/target/**</exclude>
+				<exclude>**/*.iml</exclude>
+				<exclude>**/.settings/**</exclude>
+				<exclude>**/.project</exclude>
+				<exclude>**/.classpath</exclude>
+				<exclude>**/pom.xml</exclude>
+			</excludes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.build.directory}</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>handy-aspects-exmaple.jar</include>
+			</includes>
+			<excludes>
+				<exclude>*-sources.jar</exclude>
+			</excludes>
+		</fileSet>
+	</fileSets>
+	<dependencySets>
+		<dependencySet>
+			<unpack>false</unpack>
+			<outputDirectory>lib</outputDirectory>
+			<useTransitiveFiltering>true</useTransitiveFiltering>
+		</dependencySet>
+	</dependencySets>
+
+</assembly>

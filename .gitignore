@@ -1,6 +1,21 @@
 *.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+*~
+.*.swp
+.*.swo
+.loadpath
+.buildpath
+.project
+.settings
+.classpath
+.metadata
+.idea
+*.iml
+*.ipr
+*.iws
+.checkstyle
+nbproject
+.DS_Store
+target
+test-output
+nbactions.xml
+build

@@ -1,4 +1,1 @@
-Handy-Aspects
-=============
-
-A small collection of reusable aspects using AspectJ
+# Handy Aspects Library
