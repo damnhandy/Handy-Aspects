@@ -77,7 +77,7 @@ public aspect JavaBeanAspect extends AbstractJavaBeanAspect
     * @param collection - the underlying collection which items are added to
     * @param bean - the JavaBean instance which contains the called method
     */
-   pointcut collectionMutator(Collection collection, JavaBean bean): 
+   pointcut collectionMutator(@SuppressWarnings("rawtypes") Collection collection, JavaBean bean): 
 		target(collection) && this(bean) && !withinNewObservable() &&
 		(collectionAdd() || collectionRemove() || listRemove());
 
