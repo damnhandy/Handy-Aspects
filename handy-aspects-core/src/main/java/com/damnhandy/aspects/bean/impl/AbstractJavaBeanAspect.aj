@@ -54,12 +54,12 @@ public abstract aspect AbstractJavaBeanAspect
     * @param collection - the underlying collection which is being modified
     * @param bean - the JavaBean instance which contains the called method
     */
-   abstract pointcut collectionMutator(Collection collection, JavaBean bean);
+   abstract pointcut collectionMutator(@SuppressWarnings("rawtypes") Collection collection, JavaBean bean);
 
    /**
     * 
     */
-   boolean around(Collection collection, JavaBean bean) : collectionMutator(collection,bean) {
+   boolean around(@SuppressWarnings("rawtypes") Collection collection, JavaBean bean) : collectionMutator(collection,bean) {
       try
       {
          String propertyName = bean.getFieldName(collection);
